@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class FilePath {
+    -baseFile:Path
+    -newFile:Path
+    --
+    +FilePath(baseFile:Path):void
+    --
+    +getBaseFile():Path
+    +getNewFile():Path
+    +setNewFile(newFile:Path):void
+}
+
+class Directory {
+    -path:Path
+    -filePaths:List<FilePath>
+    --
+    +Directory(path:Path):void
+    --
+
+}
+
+@enduml
